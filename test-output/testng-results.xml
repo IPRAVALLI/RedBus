@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-03-27T12:43:50 IST" name="Default suite" finished-at="2024-03-27T12:44:59 IST" duration-ms="68640">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.RedbusRunnerClass@353352b6]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2024-03-27T12:43:50 IST" name="Default test" finished-at="2024-03-27T12:44:59 IST" duration-ms="68640">
+      <class name="Runner.RedbusRunnerClass">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runner.RedbusRunnerClass@353352b6]" started-at="2024-03-27T12:43:50 IST" name="setUpClass" finished-at="2024-03-27T12:43:50 IST" duration-ms="190" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@75de6341]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.RedbusRunnerClass@353352b6]" started-at="2024-03-27T12:43:50 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-27T12:44:05 IST" duration-ms="15176" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search for buses"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["RedBus App Home Page Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.RedbusRunnerClass@353352b6]" started-at="2024-03-27T12:44:05 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-27T12:44:12 IST" duration-ms="6721" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["View Trending Offers section"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["RedBus App Home Page Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.RedbusRunnerClass@353352b6]" started-at="2024-03-27T12:44:12 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-27T12:44:22 IST" duration-ms="10350" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User searches for train tickets"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["RedBus App Home Page Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.RedbusRunnerClass@353352b6]" started-at="2024-03-27T12:44:22 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-27T12:44:30 IST" duration-ms="7567" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Enjoy the App Picture display"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["RedBus App Home Page Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.RedbusRunnerClass@353352b6]" started-at="2024-03-27T12:44:30 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-27T12:44:41 IST" duration-ms="10900" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["View Partnered with"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["RedBus App Home Page Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.RedbusRunnerClass@353352b6]" started-at="2024-03-27T12:44:41 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-27T12:44:50 IST" duration-ms="9183" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["View Private bus operators"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["RedBus App Home Page Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.RedbusRunnerClass@353352b6]" started-at="2024-03-27T12:44:50 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-27T12:44:59 IST" duration-ms="8491" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify the display of country selector on home page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["RedBus App Home Page Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.RedbusRunnerClass@353352b6]" started-at="2024-03-27T12:44:59 IST" name="tearDownClass" finished-at="2024-03-27T12:44:59 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- Runner.RedbusRunnerClass -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
