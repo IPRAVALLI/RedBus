@@ -7,19 +7,24 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 
+import Pages.RedBus_PF;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class RedbusClass {
 	WebDriver driver;
+	
 	@Given("I am a user of the RedBus app")
 	public void i_am_a_user_of_the_red_bus_app() {
 	    // Write code here that turns the phrase above into concrete actions
 	    //throw new io.cucumber.java.PendingException();
-		driver = new ChromeDriver();
+		ChromeOptions options= new ChromeOptions();
+		options.addArguments("--disable-notifications");
+		driver = new ChromeDriver(options);
 		driver.get("https://www.redbus.in");driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		
@@ -41,11 +46,15 @@ public class RedbusClass {
 @When("I enter {string} , {string} , {string}")
 public void i_enter(String string, String string2, String string3) {
     // Write code here that turns the phrase above into concrete actions
-        driver.findElement(By.id("src")).sendKeys("Hyderabad");
-		driver.findElement(By.id("dest")).sendKeys("Kakinada");
+        //driver.findElement(By.id("src")).sendKeys("Hyderabad");
+	RedBus_PF bus = new RedBus_PF(driver);
+	    bus.source(string);
+	    bus.destination(string2);
+	    bus.time(string3);
+		//driver.findElement(By.id("dest")).sendKeys("Kakinada");
 
-		driver.findElement(By.xpath("//i[@class='sc-cSHVUG NyvQv icon icon-datev2']")).click();
-		driver.findElement(By.xpath("//*[@class='dateText']")).click();
+		//driver.findElement(By.xpath("//i[@class='sc-cSHVUG NyvQv icon icon-datev2']")).click();
+		//driver.findElement(By.xpath("(//div[@role='button'])[3]")).click();
 		
 	}
 
@@ -53,7 +62,9 @@ public void i_enter(String string, String string2, String string3) {
 	public void i_click_on_the_search_button() {
 	    // Write code here that turns the phrase above into concrete actions
 	    //throw new io.cucumber.java.PendingException();
-		driver.findElement(By.id("search_button")).click();
+		//driver.findElement(By.id("search_button")).click();
+		RedBus_PF bus = new RedBus_PF(driver);
+		bus.bus();
 	}
 	
 	//scenario2
@@ -67,15 +78,18 @@ public void i_enter(String string, String string2, String string3) {
 	public void i_scroll_down_to_the_trending_offers_section() {
 	    // Write code here that turns the phrase above into concrete actions
 	    //throw new io.cucumber.java.PendingException();
-		driver.findElement(By.xpath("//*[@class='sc-jWBwVP fWOFlX']"));
+		//driver.findElement(By.xpath("//*[@class='sc-jWBwVP fWOFlX']"));
 	}
 
 	@Then("I click on a specific trending offer")
 	public void i_click_on_a_specific_trending_offer() {
 	    // Write code here that turns the phrase above into concrete actions
 	    //throw new io.cucumber.java.PendingException();
-		driver.findElement(By.xpath("//*[@class='offerWrapper']"));
-		driver.findElement(By.xpath("//*[@class='OfferSection__ViewAllText-sc-16xojcc-1 eVcjqm']")).click();
+		RedBus_PF bus = new RedBus_PF(driver);
+		bus.Wrapper();
+		bus.Section();
+		//driver.findElement(By.xpath("//*[@class='offerWrapper']"));
+		//driver.findElement(By.xpath("//*[@class='OfferSection__ViewAllText-sc-16xojcc-1 eVcjqm']")).click();
 	}
 
 	@Then("I should be directed to the offer details page")
@@ -95,8 +109,11 @@ public void i_enter(String string, String string2, String string3) {
 	public void the_user_selects_the_option_from_the_menu(String string) {
 	    // Write code here that turns the phrase above into concrete actions
 	    //throw new io.cucumber.java.PendingException();
-		driver.findElement(By.xpath("//*[@class='AboutUs__AboutUsContainer-w9osof-0 hmZTra']"));
-		driver.findElement(By.xpath("//a[contains(text(),'Book Train Tickets')]")).click();
+		RedBus_PF bus = new RedBus_PF(driver);
+		bus.Tickets();
+		bus.List();
+		//driver.findElement(By.xpath("//*[@class='AboutUs__AboutUsContainer-w9osof-0 hmZTra']"));
+		//driver.findElement(By.xpath("//a[contains(text(),'Book Train Tickets')]")).click();
 	}
 
 	@Then("the user should see a list of available trains for the given route and date")
@@ -122,14 +139,18 @@ public void i_enter(String string, String string2, String string3) {
 	public void i_should_see_the_picture(String string) {
 	    // Write code here that turns the phrase above into concrete actions
 	    //throw new io.cucumber.java.PendingException();
-		driver.findElement(By.xpath("//*[@class='AppInstallSection__AppInstallContainer-sc-11kc14c-0 fAiJnC']")).click();
+		RedBus_PF bus = new RedBus_PF(driver);
+		bus.Picture();
+		//driver.findElement(By.xpath("//*[@class='AppInstallSection__AppInstallContainer-sc-11kc14c-0 fAiJnC']")).click();
 	}
 
 	@Then("I should see scanner to download the app")
 	public void i_should_see_scanner_to_download_the_app() {
 	    // Write code here that turns the phrase above into concrete actions
 	    //throw new io.cucumber.java.PendingException();
-		driver.findElement(By.xpath("//*[@id=\"homeV2-root\"]/div[3]/div[2]/div/div[2]/div[2]/div/div[1]/img")).click();
+		RedBus_PF bus = new RedBus_PF(driver);
+		bus.Scan();
+		//driver.findElement(By.xpath("//*[@id=\"homeV2-root\"]/div[3]/div[2]/div/div[2]/div[2]/div/div[1]/img")).click();
 	}
 	
 	//Scenario 5
@@ -137,21 +158,27 @@ public void i_enter(String string, String string2, String string3) {
 	public void i_scroll_down_to_the_partnered_with_section() {
 	    // Write code here that turns the phrase above into concrete actions
 	    //throw new io.cucumber.java.PendingException();
-		driver.findElement(By.xpath("//*[@class='RtcPartneredWith__RtcPartneredWithSection-sc-1fxl38k-0 iUUZuv']"));
+		RedBus_PF bus = new RedBus_PF(driver);
+		bus.Partenered();
+		//driver.findElement(By.xpath("//*[@class='RtcPartneredWith__RtcPartneredWithSection-sc-1fxl38k-0 iUUZuv']"));
 	}
 
 	@Then("I should see a list of RTCS displayed")
 	public void i_should_see_a_list_of_rtcs_displayed() {
 	    // Write code here that turns the phrase above into concrete actions
 	    //throw new io.cucumber.java.PendingException();
-		driver.findElement(By.xpath("//*[@class='RtcPartneredWith__ViewAll-sc-1fxl38k-3 crqghW']")).click();
+		RedBus_PF bus = new RedBus_PF(driver);
+		bus.Rtcs();
+		//driver.findElement(By.xpath("//*[@class='RtcPartneredWith__ViewAll-sc-1fxl38k-3 crqghW']")).click();
 	}
 	//Scenario 6
 	@When("I scroll down to the Private Operators section")
 	public void i_scroll_down_to_the_private_operators_section() {
 	    // Write code here that turns the phrase above into concrete actions
 	    //throw new io.cucumber.java.PendingException();
-		driver.findElement(By.xpath("//*[@class='PrivatePartners__PrivatePartnerContainer-sc-2695bf-0 bLGySv']"));
+		RedBus_PF bus = new RedBus_PF(driver);
+		bus.Operators();
+		//driver.findElement(By.xpath("//*[@class='PrivatePartners__PrivatePartnerContainer-sc-2695bf-0 bLGySv']"));
 	}
 
 	@Then("I should see a list of travels displayed")
@@ -164,7 +191,9 @@ public void i_enter(String string, String string2, String string3) {
 	public void i_click_on_a_specific_travels() {
 	    // Write code here that turns the phrase above into concrete actions
 	    //throw new io.cucumber.java.PendingException();
-		driver.findElement(By.xpath("//*[@class='PrivatePartners__ViewAll-sc-2695bf-2 dmxFif']")).click();
+		RedBus_PF bus = new RedBus_PF(driver);
+		bus.Travels();
+		//driver.findElement(By.xpath("//*[@class='PrivatePartners__ViewAll-sc-2695bf-2 dmxFif']")).click();
 	}
 
 	@Then("I should be directed to the private bus details page")
@@ -177,7 +206,9 @@ public void i_enter(String string, String string2, String string3) {
 	public void i_view_the_global_presence_section() {
 	    // Write code here that turns the phrase above into concrete actions
 	    //throw new io.cucumber.java.PendingException();
-		driver.findElement(By.xpath("//*[@class='GlobalPresence__GlobalPresenceSection-sc-1dii3hq-0 eHkZYY']")).click();
+		RedBus_PF bus = new RedBus_PF(driver);
+		bus.Countries();
+		//driver.findElement(By.xpath("//*[@class='GlobalPresence__GlobalPresenceSection-sc-1dii3hq-0 eHkZYY']")).click();
 	}
 
 	@Then("I should see a country selector dropdown")
