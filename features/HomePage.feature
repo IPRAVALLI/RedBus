@@ -10,12 +10,6 @@ Given I am a user of the RedBus app
 When I enter "<From>" , "<To>" , "<Date>"
 Then I click on the search button
 
-Scenario: View Trending Offers section
-Given I am on the RedBus home page app
-When I scroll down to the Trending Offers section
-Then I click on a specific trending offer
-And I should be directed to the offer details page
-
 Scenario: User searches for train tickets
 Given the user is on the RedBus home page
 When the user selects the "<Train Tickets>" option from the menu

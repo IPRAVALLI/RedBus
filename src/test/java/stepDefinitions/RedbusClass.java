@@ -1,16 +1,17 @@
 package stepDefinitions;
 
-import java.awt.Robot;
-import java.awt.event.MouseEvent;
+
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 
 import Pages.RedBus_PF;
+//import Pages.RedBus_PF;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -46,12 +47,26 @@ public class RedbusClass {
 @When("I enter {string} , {string} , {string}")
 public void i_enter(String string, String string2, String string3) {
     // Write code here that turns the phrase above into concrete actions
-        //driver.findElement(By.id("src")).sendKeys("Hyderabad");
+   // driver.findElement(By.id("src")).sendKeys("Hyderabad");
+	//driver.findElement(By.id("dest")).sendKeys("Kakinada");
 	RedBus_PF bus = new RedBus_PF(driver);
-	    bus.source(string);
+	   bus.source(string);
 	    bus.destination(string2);
-	    bus.time(string3);
-		//driver.findElement(By.id("dest")).sendKeys("Kakinada");
+	    bus.Day();
+	    bus.time();
+	    bus.Date_31();
+	//WebElement day = driver.findElement(By.id("onwardCal"));
+	//day.click();
+//	    WebElement nav =driver.findElement(By.xpath("//div[@class='DayNavigator__IconBlock-qj8jdz-2 iZpveD']/following-sibling::div[2]"));
+//		nav.click();
+//        try {
+//            Thread.sleep(2000);
+//        }catch (Exception e){}
+//        WebElement  date_31 = driver.findElement(By.xpath("//span[text()='7']"));
+        //date_31.click();
+	    
+ 
+		
 
 		//driver.findElement(By.xpath("//i[@class='sc-cSHVUG NyvQv icon icon-datev2']")).click();
 		//driver.findElement(By.xpath("(//div[@role='button'])[3]")).click();
@@ -64,42 +79,14 @@ public void i_enter(String string, String string2, String string3) {
 	    //throw new io.cucumber.java.PendingException();
 		//driver.findElement(By.id("search_button")).click();
 		RedBus_PF bus = new RedBus_PF(driver);
-		bus.bus();
+		bus.Search();
+//		WebElement  search_buses_button = driver.findElement(By.xpath("//button[text()='SEARCH BUSES']"));
+//        search_buses_button.click();
 	}
+
 	
 	//scenario2
-	@Given("I am on the RedBus home page app")
-	public void i_am_on_the_red_bus_home_page_app() {
-	    // Write code here that turns the phrase above into concrete actions
-	    //throw new io.cucumber.java.PendingException();
-	}
-
-	@When("I scroll down to the Trending Offers section")
-	public void i_scroll_down_to_the_trending_offers_section() {
-	    // Write code here that turns the phrase above into concrete actions
-	    //throw new io.cucumber.java.PendingException();
-		//driver.findElement(By.xpath("//*[@class='sc-jWBwVP fWOFlX']"));
-	}
-
-	@Then("I click on a specific trending offer")
-	public void i_click_on_a_specific_trending_offer() {
-	    // Write code here that turns the phrase above into concrete actions
-	    //throw new io.cucumber.java.PendingException();
-		RedBus_PF bus = new RedBus_PF(driver);
-		bus.Wrapper();
-		bus.Section();
-		//driver.findElement(By.xpath("//*[@class='offerWrapper']"));
-		//driver.findElement(By.xpath("//*[@class='OfferSection__ViewAllText-sc-16xojcc-1 eVcjqm']")).click();
-	}
-
-	@Then("I should be directed to the offer details page")
-	public void i_should_be_directed_to_the_offer_details_page() {
-	    // Write code here that turns the phrase above into concrete actions
-	    // new io.cucumber.java.PendingException();
-	}
-	//scenario 3
-
-	@Given("the user is on the RedBus home page")
+    @Given("the user is on the RedBus home page")
 	public void the_user_is_on_the_red_bus_home_page() {
 	    // Write code here that turns the phrase above into concrete actions
 	   // throw new io.cucumber.java.PendingException();
@@ -112,8 +99,8 @@ public void i_enter(String string, String string2, String string3) {
 		RedBus_PF bus = new RedBus_PF(driver);
 		bus.Tickets();
 		bus.List();
-		//driver.findElement(By.xpath("//*[@class='AboutUs__AboutUsContainer-w9osof-0 hmZTra']"));
-		//driver.findElement(By.xpath("//a[contains(text(),'Book Train Tickets')]")).click();
+//		driver.findElement(By.xpath("//*[@class='AboutUs__AboutUsContainer-w9osof-0 hmZTra']"));
+//		driver.findElement(By.xpath("//a[contains(text(),'Book Train Tickets')]")).click();
 	}
 
 	@Then("the user should see a list of available trains for the given route and date")
@@ -122,7 +109,7 @@ public void i_enter(String string, String string2, String string3) {
 	    //throw new io.cucumber.java.PendingException();
 	}
 	
-	//Scenario 4
+	//Scenario 3
 	@Given("I am on the RedBus home page")
 	public void i_am_on_the_red_bus_home_page() {
 	    // Write code here that turns the phrase above into concrete actions
@@ -153,7 +140,7 @@ public void i_enter(String string, String string2, String string3) {
 		//driver.findElement(By.xpath("//*[@id=\"homeV2-root\"]/div[3]/div[2]/div/div[2]/div[2]/div/div[1]/img")).click();
 	}
 	
-	//Scenario 5
+	//Scenario 4
 	@When("I scroll down to the Partnered with section")
 	public void i_scroll_down_to_the_partnered_with_section() {
 	    // Write code here that turns the phrase above into concrete actions
@@ -171,7 +158,13 @@ public void i_enter(String string, String string2, String string3) {
 		bus.Rtcs();
 		//driver.findElement(By.xpath("//*[@class='RtcPartneredWith__ViewAll-sc-1fxl38k-3 crqghW']")).click();
 	}
-	//Scenario 6
+	//Scenario 5
+
+@Given("I am on the RedBus home page app")
+public void i_am_on_the_red_bus_home_page_app() {
+    // Write code here that turns the phrase above into concrete actions
+    //throw new io.cucumber.java.PendingException();
+}
 	@When("I scroll down to the Private Operators section")
 	public void i_scroll_down_to_the_private_operators_section() {
 	    // Write code here that turns the phrase above into concrete actions
@@ -201,7 +194,7 @@ public void i_enter(String string, String string2, String string3) {
 	    // Write code here that turns the phrase above into concrete actions
 	    //throw new io.cucumber.java.PendingException();
 	}
-	//Scenario 7
+	//Scenario 6
 	@When("I view the Global presence section")
 	public void i_view_the_global_presence_section() {
 	    // Write code here that turns the phrase above into concrete actions

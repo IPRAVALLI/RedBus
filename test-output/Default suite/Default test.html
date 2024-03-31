@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>6/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>5/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Mar 28 12:59:32 IST 2024</td>
+<td>Started on:</td><td>Sun Mar 31 12:04:17 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>63 seconds (63769 ms)</td>
+<tr><td>Total time:</td><td>57 seconds (57401 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,16 +76,16 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Runner.RedbusRunnerClass.runScenario()'><b>runScenario</b><br>Test class: Runner.RedbusRunnerClass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search for buses", "RedBus App Home Page Functionality"</td>
-<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+<td title='Runner.RedbusRunnerClass.runScenario()'><b>runScenario</b><br>Test class: Runner.RedbusRunnerClass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "View Private bus operators", "RedBus App Home Page Functionality"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@class=&apos;PrivatePartners__ViewAll-sc-2695bf-2 dmxFif&apos;]&quot;}
   (Session info: chrome=123.0.6312.86)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [7de51063c6fc583246f6c62143cf302d, sendKeysToElement {value=[Ljava.lang.CharSequence;@1f966492, id=f.5F2ABC51A0C8F3CB485B2C5CDD623E4D.d.534DE195D3D0C46292C35E38F05518F0.e.58}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.86, chrome: {chromedriverVersion: 123.0.6312.86 (9b72c47a0536..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57745}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57745/devtoo..., se:cdpVersion: 123.0.6312.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (7de51063c6fc583246f6c62143cf302d)] -&gt; xpath: //i[@class=&apos;sc-cSHVUG NyvQv icon icon-datev2&apos;]]
-Session ID: 7de51063c6fc583246f6c62143cf302d
+Command: [2bb3243c5281c1cdd0e7396e4f9366a2, findElement {value=//*[@class=&apos;PrivatePartners__ViewAll-sc-2695bf-2 dmxFif&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.86, chrome: {chromedriverVersion: 123.0.6312.86 (9b72c47a0536..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63167}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63167/devtoo..., se:cdpVersion: 123.0.6312.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2bb3243c5281c1cdd0e7396e4f9366a2
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -98,27 +98,26 @@ Session ID: 7de51063c6fc583246f6c62143cf302d
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy21.sendKeys(Unknown Source)
-	at Pages.RedBus_PF.time(RedBus_PF.java:30)
-	at stepDefinitions.RedbusClass.i_enter(RedbusClass.java:53)
-	at ✽.I enter &quot;&lt;From&gt;&quot; , &quot;&lt;To&gt;&quot; , &quot;&lt;Date&gt;&quot;(file:///C:/Users/IPRAVALL/eclipse-workspace/RedBus/features/HomePage.feature:10)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1558133170", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1558133170'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy21.click(Unknown Source)
+	at Pages.RedBus_PF.Travels(RedBus_PF.java:77)
+	at stepDefinitions.RedbusClass.i_click_on_a_specific_travels(RedbusClass.java:188)
+	at ✽.I click on a specific travels(file:///C:/Users/IPRAVALL/eclipse-workspace/RedBus/features/HomePage.feature:33)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1071933072", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1071933072'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@class=&apos;PrivatePartners__ViewAll-sc-2695bf-2 dmxFif&apos;]&quot;}
   (Session info: chrome=123.0.6312.86)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [7de51063c6fc583246f6c62143cf302d, sendKeysToElement {value=[Ljava.lang.CharSequence;@1f966492, id=f.5F2ABC51A0C8F3CB485B2C5CDD623E4D.d.534DE195D3D0C46292C35E38F05518F0.e.58}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.86, chrome: {chromedriverVersion: 123.0.6312.86 (9b72c47a0536..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57745}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57745/devtoo..., se:cdpVersion: 123.0.6312.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (7de51063c6fc583246f6c62143cf302d)] -&gt; xpath: //i[@class=&apos;sc-cSHVUG NyvQv icon icon-datev2&apos;]]
-Session ID: 7de51063c6fc583246f6c62143cf302d
+Command: [2bb3243c5281c1cdd0e7396e4f9366a2, findElement {value=//*[@class=&apos;PrivatePartners__ViewAll-sc-2695bf-2 dmxFif&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.86, chrome: {chromedriverVersion: 123.0.6312.86 (9b72c47a0536..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63167}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63167/devtoo..., se:cdpVersion: 123.0.6312.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2bb3243c5281c1cdd0e7396e4f9366a2
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -131,19 +130,18 @@ Session ID: 7de51063c6fc583246f6c62143cf302d
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy21.sendKeys(Unknown Source)
-	at Pages.RedBus_PF.time(RedBus_PF.java:30)
-	at stepDefinitions.RedbusClass.i_enter(RedbusClass.java:53)
-	at ✽.I enter &quot;&lt;From&gt;&quot; , &quot;&lt;To&gt;&quot; , &quot;&lt;Date&gt;&quot;(file:///C:/Users/IPRAVALL/eclipse-workspace/RedBus/features/HomePage.feature:10)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy21.click(Unknown Source)
+	at Pages.RedBus_PF.Travels(RedBus_PF.java:77)
+	at stepDefinitions.RedbusClass.i_click_on_a_specific_travels(RedbusClass.java:188)
+	at ✽.I click on a specific travels(file:///C:/Users/IPRAVALL/eclipse-workspace/RedBus/features/HomePage.feature:33)
 </pre></div></td>
-<td>13</td>
+<td>19</td>
 <td>Runner.RedbusRunnerClass@353352b6</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
@@ -155,34 +153,29 @@ Session ID: 7de51063c6fc583246f6c62143cf302d
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Runner.RedbusRunnerClass.runScenario()'><b>runScenario</b><br>Test class: Runner.RedbusRunnerClass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "View Trending Offers section", "RedBus App Home Page Functionality"</td>
-<td></td>
-<td>7</td>
-<td>Runner.RedbusRunnerClass@353352b6</td></tr>
-<tr>
-<td title='Runner.RedbusRunnerClass.runScenario()'><b>runScenario</b><br>Test class: Runner.RedbusRunnerClass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "View Private bus operators", "RedBus App Home Page Functionality"</td>
-<td></td>
-<td>10</td>
-<td>Runner.RedbusRunnerClass@353352b6</td></tr>
-<tr>
 <td title='Runner.RedbusRunnerClass.runScenario()'><b>runScenario</b><br>Test class: Runner.RedbusRunnerClass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the display of country selector on home page", "RedBus App Home Page Functionality"</td>
 <td></td>
-<td>6</td>
+<td>4</td>
+<td>Runner.RedbusRunnerClass@353352b6</td></tr>
+<tr>
+<td title='Runner.RedbusRunnerClass.runScenario()'><b>runScenario</b><br>Test class: Runner.RedbusRunnerClass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search for buses", "RedBus App Home Page Functionality"</td>
+<td></td>
+<td>10</td>
 <td>Runner.RedbusRunnerClass@353352b6</td></tr>
 <tr>
 <td title='Runner.RedbusRunnerClass.runScenario()'><b>runScenario</b><br>Test class: Runner.RedbusRunnerClass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User searches for train tickets", "RedBus App Home Page Functionality"</td>
 <td></td>
-<td>10</td>
+<td>7</td>
+<td>Runner.RedbusRunnerClass@353352b6</td></tr>
+<tr>
+<td title='Runner.RedbusRunnerClass.runScenario()'><b>runScenario</b><br>Test class: Runner.RedbusRunnerClass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "View Partnered with", "RedBus App Home Page Functionality"</td>
+<td></td>
+<td>8</td>
 <td>Runner.RedbusRunnerClass@353352b6</td></tr>
 <tr>
 <td title='Runner.RedbusRunnerClass.runScenario()'><b>runScenario</b><br>Test class: Runner.RedbusRunnerClass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Enjoy the App Picture display", "RedBus App Home Page Functionality"</td>
 <td></td>
 <td>6</td>
-<td>Runner.RedbusRunnerClass@353352b6</td></tr>
-<tr>
-<td title='Runner.RedbusRunnerClass.runScenario()'><b>runScenario</b><br>Test class: Runner.RedbusRunnerClass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "View Partnered with", "RedBus App Home Page Functionality"</td>
-<td></td>
-<td>9</td>
 <td>Runner.RedbusRunnerClass@353352b6</td></tr>
 </table><p>
 </body>

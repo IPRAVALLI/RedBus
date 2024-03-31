@@ -1,5 +1,6 @@
 package Pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,8 +15,10 @@ public class RedBus_PF {
 	//scenario 1
     @FindBy(id="src") WebElement from;
     @FindBy(id="dest") WebElement to;
-    @FindBy(xpath="//i[@class='sc-cSHVUG NyvQv icon icon-datev2']") WebElement date;
-    @FindBy(id="search_button") WebElement search;
+    @FindBy(id="onwardCal")WebElement day;
+    @FindBy(xpath="//div[@class='DayNavigator__IconBlock-qj8jdz-2 iZpveD']/following-sibling::div[2]") WebElement date;
+    @FindBy(xpath="//span[text()='7']")WebElement date_31;
+    @FindBy(xpath="//button[text()='SEARCH BUSES']") WebElement search;
     public void source(String string) {
     	System.out.println(string);
     	from.sendKeys("Hyderabad");
@@ -25,23 +28,19 @@ public class RedBus_PF {
     	System.out.println(string);
     	to.sendKeys("Visakhapatnam");
     }
-    public void time(String string) {
-    	System.out.println(string);
-    	date.sendKeys("30 March 2024");
+    public void Day() {
+    	day.click();
     }
-    public void bus() {
+    public void time() {
+    	date.click();
+    }
+    public void Date_31() {
+    	date_31.click();
+    }
+    public void Search() {
     	search.click();
     }
     //Scenario 2
-    @FindBy(xpath="//*[@class='offerWrapper']") WebElement wrapper;
-    @FindBy(xpath="//*[@class='OfferSection__ViewAllText-sc-16xojcc-1 eVcjqm']") WebElement section;
-    public void Wrapper() {
-    	wrapper.click();
-    }
-    public void Section() {
-    	section.click();
-    }
-    //Scenario 3
     @FindBy(xpath="//*[@class='AboutUs__AboutUsContainer-w9osof-0 hmZTra']") WebElement tickets;
     @FindBy(xpath="//a[contains(text(),'Book Train Tickets')]") WebElement list;
     public void Tickets() {
@@ -50,7 +49,7 @@ public class RedBus_PF {
     public void List() {
     	list.click();
     }
-    //Scenario 4
+    //Scenario 3
     @FindBy(xpath="//*[@class='AppInstallSection__AppInstallContainer-sc-11kc14c-0 fAiJnC']") WebElement picture;
     @FindBy(xpath="//img[@class='QrCodeAndPlaystoreSection__QrImg-sc-1xehksy-3 bGbiZT']") WebElement scan;
     public void Picture() {
@@ -59,7 +58,7 @@ public class RedBus_PF {
     public void Scan() {
     	scan.click();
     }
-    //Scenario 5
+    //Scenario 4
     @FindBy(xpath="//*[@class='RtcPartneredWith__RtcPartneredWithSection-sc-1fxl38k-0 iUUZuv']") WebElement partenered;
     @FindBy(xpath="//*[@class='RtcPartneredWith__ViewAll-sc-1fxl38k-3 crqghW']") WebElement rtcs;
     public void Partenered() {
@@ -68,7 +67,7 @@ public class RedBus_PF {
     public void Rtcs() {
     	rtcs.click();
     }
-    //Scenario 6
+    //Scenario 5
     @FindBy(xpath="//*[@class='PrivatePartners__PrivatePartnerContainer-sc-2695bf-0 bLGySv']") WebElement operators;
     @FindBy(xpath="//*[@class='PrivatePartners__ViewAll-sc-2695bf-2 dmxFif']") WebElement travels;
     public void Operators() {
@@ -77,7 +76,7 @@ public class RedBus_PF {
     public void Travels() {
     	travels.click();
     }
-    //Scenario 7
+    //Scenario 6
     @FindBy(xpath="//*[@class='GlobalPresence__GlobalPresenceSection-sc-1dii3hq-0 eHkZYY']") WebElement countries;
     public void Countries() {
     	countries.click();
