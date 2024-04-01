@@ -53,7 +53,7 @@ public void i_enter(String string, String string2, String string3) {
 	   bus.source(string);
 	    bus.destination(string2);
 	    bus.Day();
-	    bus.time();
+	   // bus.time();
 	    bus.Date_31();
 	//WebElement day = driver.findElement(By.id("onwardCal"));
 	//day.click();
@@ -74,10 +74,11 @@ public void i_enter(String string, String string2, String string3) {
 	}
 
 	@Then("I click on the search button")
-	public void i_click_on_the_search_button() {
+	public void i_click_on_the_search_button()  {
 	    // Write code here that turns the phrase above into concrete actions
 	    //throw new io.cucumber.java.PendingException();
 		//driver.findElement(By.id("search_button")).click();
+		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		RedBus_PF bus = new RedBus_PF(driver);
 		bus.Search();
 //		WebElement  search_buses_button = driver.findElement(By.xpath("//button[text()='SEARCH BUSES']"));

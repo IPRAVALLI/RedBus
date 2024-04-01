@@ -1,5 +1,7 @@
 package Pages;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,7 +18,7 @@ public class RedBus_PF {
     @FindBy(id="src") WebElement from;
     @FindBy(id="dest") WebElement to;
     @FindBy(id="onwardCal")WebElement day;
-    @FindBy(xpath="//div[@class='DayNavigator__IconBlock-qj8jdz-2 iZpveD']/following-sibling::div[2]") WebElement date;
+   // @FindBy(xpath="//div[@class='DayNavigator__IconBlock-qj8jdz-2 iZpveD']/following-sibling::div[2]") WebElement date;
     @FindBy(xpath="//span[text()='7']")WebElement date_31;
     @FindBy(xpath="//button[text()='SEARCH BUSES']") WebElement search;
     public void source(String string) {
@@ -31,13 +33,13 @@ public class RedBus_PF {
     public void Day() {
     	day.click();
     }
-    public void time() {
-    	date.click();
-    }
+//    
+
     public void Date_31() {
     	date_31.click();
     }
     public void Search() {
+    	
     	search.click();
     }
     //Scenario 2
