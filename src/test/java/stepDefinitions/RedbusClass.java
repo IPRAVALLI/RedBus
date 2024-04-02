@@ -45,16 +45,16 @@ public class RedbusClass {
 
 //scenario1
 @When("I enter {string} , {string} , {string}")
-public void i_enter(String string, String string2, String string3) {
+public void i_enter(String string, String string2, String string3) throws InterruptedException {
     // Write code here that turns the phrase above into concrete actions
    // driver.findElement(By.id("src")).sendKeys("Hyderabad");
 	//driver.findElement(By.id("dest")).sendKeys("Kakinada");
 	RedBus_PF bus = new RedBus_PF(driver);
-	   bus.source(string);
-	    bus.destination(string2);
+	   bus.bordingPoint("Hyderabad");
+	    bus.destination("Vijayawada");
 	    bus.Day();
 	   // bus.time();
-	    bus.Date_31();
+	    bus.date_pick();
 	//WebElement day = driver.findElement(By.id("onwardCal"));
 	//day.click();
 //	    WebElement nav =driver.findElement(By.xpath("//div[@class='DayNavigator__IconBlock-qj8jdz-2 iZpveD']/following-sibling::div[2]"));
@@ -74,13 +74,13 @@ public void i_enter(String string, String string2, String string3) {
 	}
 
 	@Then("I click on the search button")
-	public void i_click_on_the_search_button()  {
+	public void i_click_on_the_search_button() throws InterruptedException  {
 	    // Write code here that turns the phrase above into concrete actions
 	    //throw new io.cucumber.java.PendingException();
 		//driver.findElement(By.id("search_button")).click();
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		RedBus_PF bus = new RedBus_PF(driver);
-		bus.Search();
+		bus.search();
 //		WebElement  search_buses_button = driver.findElement(By.xpath("//button[text()='SEARCH BUSES']"));
 //        search_buses_button.click();
 	}
@@ -179,6 +179,9 @@ public void i_am_on_the_red_bus_home_page_app() {
 	public void i_should_see_a_list_of_travels_displayed() {
 	    // Write code here that turns the phrase above into concrete actions
 	    //throw new io.cucumber.java.PendingException();
+		RedBus_PF bus = new RedBus_PF(driver);
+		bus.Travels();
+		
 	}
 
 	@Then("I click on a specific travels")
@@ -186,7 +189,7 @@ public void i_am_on_the_red_bus_home_page_app() {
 	    // Write code here that turns the phrase above into concrete actions
 	    //throw new io.cucumber.java.PendingException();
 		RedBus_PF bus = new RedBus_PF(driver);
-		bus.Travels();
+		//bus.Travels();
 		//driver.findElement(By.xpath("//*[@class='PrivatePartners__ViewAll-sc-2695bf-2 dmxFif']")).click();
 	}
 

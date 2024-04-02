@@ -1,7 +1,5 @@
 package Pages;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,32 +13,32 @@ public class RedBus_PF {
 		PageFactory.initElements(driver, this);
 	}
 	//scenario 1
-    @FindBy(id="src") WebElement from;
+	@FindBy(id="src") WebElement from;
     @FindBy(id="dest") WebElement to;
-    @FindBy(id="onwardCal")WebElement day;
-   // @FindBy(xpath="//div[@class='DayNavigator__IconBlock-qj8jdz-2 iZpveD']/following-sibling::div[2]") WebElement date;
-    @FindBy(xpath="//span[text()='7']")WebElement date_31;
+    @FindBy(id="onwardCal") WebElement day;
+    @FindBy(xpath="//span[text()='7']") WebElement date_6;
     @FindBy(xpath="//button[text()='SEARCH BUSES']") WebElement search;
-    public void source(String string) {
-    	System.out.println(string);
-    	from.sendKeys("Hyderabad");
-    	
+    public void bordingPoint(String string) {
+    	from.sendKeys(string);
     }
-    public void destination(String string) {
-    	System.out.println(string);
-    	to.sendKeys("Visakhapatnam");
+    public void destination(String string) throws InterruptedException {
+    	Thread.sleep(3000);
+    	to.sendKeys(string);
+    }
+    public void data(String From, String To) {
+    	from.sendKeys(From);
+    	to.sendKeys(To);
     }
     public void Day() {
     	day.click();
     }
-//    
-
-    public void Date_31() {
-    	date_31.click();
+    public void date_pick() {
+    	date_6.click();
     }
-    public void Search() {
-    	
+    public void search() throws InterruptedException {
+    	Thread.sleep(5000);
     	search.click();
+    
     }
     //Scenario 2
     @FindBy(xpath="//*[@class='AboutUs__AboutUsContainer-w9osof-0 hmZTra']") WebElement tickets;
@@ -71,7 +69,7 @@ public class RedBus_PF {
     }
     //Scenario 5
     @FindBy(xpath="//*[@class='PrivatePartners__PrivatePartnerContainer-sc-2695bf-0 bLGySv']") WebElement operators;
-    @FindBy(xpath="//*[@class='PrivatePartners__ViewAll-sc-2695bf-2 dmxFif']") WebElement travels;
+    @FindBy(xpath="//a[text()='Chartered Speed Bus']") WebElement travels;
     public void Operators() {
     	operators.click();
     }

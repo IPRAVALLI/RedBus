@@ -6,7 +6,7 @@ When I open the RedBus app
 Then I should see the RedBus home page
  
 Scenario: Search for buses
-Given I am a user of the RedBus app
+Given I am on the RedBus home page
 When I enter "<From>" , "<To>" , "<Date>"
 Then I click on the search button
 
